@@ -218,21 +218,16 @@ function budget(){
  const valid=Number.isInteger(n)&&n>=1&&n<=20;
  input.setCustomValidity(valid?'':'請輸入 1 至 20 位旅客');
  document.querySelector('#people-error').textContent=valid?'':'請輸入 1 至 20 的整數人數。';
- if(!valid){['total-twd','group-total-twd','reserve-total-twd'].forEach(id=>document.getElementById(id).textContent='');document.querySelector('#group-total').textContent='請先輸入有效人數';document.querySelector('#total').textContent='—';document.querySelector('#budget-items').innerHTML='';document.querySelector('#room-note').textContent='';document.querySelector('#reserve-total').textContent='';return;}
+ if(!valid){['total-twd'].forEach(id=>document.getElementById(id).textContent='');document.querySelector('#total').textContent='—';document.querySelector('#budget-items').innerHTML='';document.querySelector('#room-note').textContent='';return;}
  const amounts=budgets[document.querySelector('#budget-style').value];
  const rooms=Math.ceil(n/2);
  const group=amounts.map((v,i)=>v.map(x=>i===0?x*2*rooms:x*n));
  const lower=group.reduce((sum,v)=>sum+v[0],0),upper=group.reduce((sum,v)=>sum+v[1],0);
  const range=(lo,hi)=>`€${money(Math.round(lo))}–${money(Math.round(hi))}`;
  document.querySelector('#total').textContent=range(lower/n,upper/n);
- document.querySelector('#total-twd').textContent=twd(lower/n,upper/n);
- document.querySelector('#group-total-twd').textContent=twd(lower,upper);
- document.querySelector('#reserve-total-twd').textContent=twd(lower*1.15,upper*1.15);
- document.querySelector('#group-total').textContent=range(lower,upper);
- document.querySelector('#group-label').textContent=`${n} 人同行總預算`;
+ document.querySelector('#total-twd').textContent='每人約當台幣 '+twd(lower/n,upper/n);
  document.querySelector('#room-note').textContent=`${n} 人 · ${rooms} 間雙人房 × 20 晚${n%2?'（含 1 間單人入住，按整房估算）':''}`;
  document.querySelector('#budget-items').innerHTML=group.map((v,i)=>`<div><span>${['住宿 · 每人分攤 20 晚','餐飲 · 每人 21 天','交通 · 每人','門票與體驗 · 每人'][i]}</span><span class="cost-values"><b>${range(v[0]/n,v[1]/n)}</b><small>${twd(v[0]/n,v[1]/n)}</small></span></div>`).join('');
- document.querySelector('#reserve-total').textContent=`含 15% 預備金的同行總額：${range(lower*1.15,upper*1.15)}`;
 }
 document.querySelector('#budget-style').addEventListener('change',budget);document.querySelector('#travelers').addEventListener('input',budget);document.querySelector('#exchange-rate').addEventListener('input',budget);budget();
 const tasks=['確認巴塞隆納進、波多出的多點進出機票','確認護照效期與適用的入境要求（依國籍查官方資訊）','預訂 20 晚旅宿，優先可取消方案','預約聖家堂、奎爾公園、阿爾罕布拉宮與辛特拉門票','確認跨城火車與塞維亞－里斯本巴士班次','準備旅遊保險、網路、轉接頭與好走的鞋'];
