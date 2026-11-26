@@ -1,10 +1,9 @@
 const cities = [
 {id:'barcelona',name:'巴塞隆納',en:'BARCELONA',dates:'05.22 — 05.24',nights:3,color:'#d9ad83',symbol:'✺',stay:'Eixample／近地鐵',intro:'高第的曲線、彩色馬賽克，和地中海的第一陣風。'},
 {id:'madrid',name:'馬德里',en:'MADRID',dates:'05.25 — 05.27',nights:3,color:'#f4bd4b',symbol:'☀',stay:'Las Letras／Retiro 周邊',intro:'從美術館到小酒館，慢慢進入西班牙的節奏。'},
-{id:'granada',name:'格拉納達',en:'GRANADA',dates:'05.28 — 05.29',nights:2,color:'#e8ad95',symbol:'✿',stay:'Centro／大教堂周邊',intro:'紅色宮殿、白色山城，和一場溫柔的日落。'},
-{id:'seville',name:'塞維亞',en:'SEVILLE',dates:'05.30 — 06.01',nights:3,color:'#c7d1af',symbol:'❋',stay:'Santa Cruz／Centro',intro:'在橘樹與磁磚之間，遇見安達魯西亞。'},
-{id:'lisbon',name:'里斯本',en:'LISBON',dates:'06.02 — 06.06',nights:5,color:'#bacfd7',symbol:'≈',stay:'Baixa／Chiado，優先近地鐵',intro:'電車、蛋塔和海風，給城市留多一點時間。'},
-{id:'porto',name:'波多',en:'PORTO',dates:'06.07 — 06.11',nights:4,color:'#e7cb83',symbol:'♡',stay:'Bolhão／Aliados',intro:'在杜羅河畔，替這趟假期寫下最後一頁。'}];
+{id:'seville',name:'塞維亞',en:'SEVILLE',dates:'05.28 — 05.30',nights:3,color:'#c7d1af',symbol:'❋',stay:'Santa Cruz／Centro',intro:'在橘樹與磁磚之間，遇見安達魯西亞。'},
+{id:'lisbon',name:'里斯本',en:'LISBON',dates:'05.31 — 06.05',nights:6,color:'#bacfd7',symbol:'≈',stay:'Baixa／Chiado，優先近地鐵',intro:'電車、蛋塔和海風，給城市留多一點時間。'},
+{id:'porto',name:'波多',en:'PORTO',dates:'06.06 — 06.11',nights:5,color:'#e7cb83',symbol:'♡',stay:'Bolhão／Aliados',intro:'在杜羅河畔，替這趟假期寫下最後一頁。'}];
 // One entry per calendar day. Arrival and departure days are included.
 const plan = [
  [
@@ -56,28 +55,12 @@ const plan = [
   "托雷多當日來回；預留車站至老城接駁。"
  ],
  [
-  "granada",
-  "往南，在白色山城等夕陽",
-  "馬德里搭火車至格拉納達，估約 3.5–4.5 小時。",
-  "入住與午休後，大教堂周邊及阿爾拜辛街區散步。",
-  "聖尼古拉斯觀景台看夕陽。",
-  "宿格拉納達；石板坡路較多，若抵達較晚先休息。"
- ],
- [
-  "granada",
-  "阿爾罕布拉的花園時光",
-  "依預約時段參觀納斯里德宮。",
-  "阿爾卡薩巴與赫內拉利費花園，園區留 4–5 小時。",
-  "回市區休息，簡單晚餐。",
-  "需提早具名訂票並攜帶護照；宮殿時段不可錯過。"
- ],
- [
   "seville",
   "前往塞維亞，今晚聽佛朗明哥",
-  "火車前往塞維亞，估約 2.5–3.5 小時。",
+  "馬德里搭高鐵前往塞維亞，車程估約 2.5–3 小時，另留車站接駁與安檢時間。",
   "入住後逛聖十字區，留時間午休。",
   "預約正式劇場的佛朗明哥表演。",
-  "宿塞維亞；以開賣班次確認是否直達。"
+  "宿塞維亞；預訂 Madrid Puerta de Atocha 至 Sevilla Santa Justa 的班次。"
  ],
  [
   "seville",
@@ -132,8 +115,16 @@ const plan = [
   "海邊或城市，選喜歡的步調",
   "天氣好搭車前往卡斯凱什，海邊散步。",
   "午餐後慢慢回里斯本，留時間逛 Baixa 與 Chiado。",
-  "河畔日落，整理隔天前往波多的行李。",
+  "回里斯本吃晚餐，早點回旅宿休息。",
   "宿里斯本；雨天可改古本基安博物館，疲累可整天留在市區。"
+ ],
+ [
+  "lisbon",
+  "多留一天，讓里斯本慢下來",
+  "睡晚一點，在 Baixa 與 Chiado 找間咖啡館。",
+  "自由散步、補上喜歡的街區，或在旅宿午休。",
+  "河畔看夕陽，整理明天前往波多的行李。",
+  "新增的放鬆日，不排限時門票；可吸收天氣與前幾天的疲勞。"
  ],
  [
   "porto",
@@ -161,6 +152,14 @@ const plan = [
  ],
  [
   "porto",
+  "波多的留白，一整天交給自己",
+  "在 Bolhão 市場慢慢吃早餐，逛街採買。",
+  "河畔喝咖啡，或選一處喜歡的景點重訪。",
+  "找一間小餐館吃晚餐，提早回旅宿休息。",
+  "新增的放鬆日；想去杜羅河谷可整天改一日團，需另訂，不與市區行程硬塞同一天。"
+ ],
+ [
+  "porto",
   "最後一天，也要慢慢過",
   "河畔吃早餐；市場與伴手禮採買改排前一天。",
   "搭車至 Foz 河海交會處散步。",
@@ -177,15 +176,7 @@ const plan = [
  ]
 ];
 // Photos follow each day's named landmarks, including optional alternatives.
-const dayPlaces = [
- ['gothic','barcelona-cathedral'],['sagrada','guell','gracia'],['batllo','mila','passeig','barceloneta'],
- ['sol','plaza-mayor','letras'],['prado','retiro','letras'],['toledo-cathedral','toledo-jewish','toledo-view'],
- ['granada-cathedral','albaicin','san-nicolas'],['nasrid','alcazaba','generalife'],['santa-cruz'],
- ['alcazar','seville-cathedral','giralda'],['plaza-espana','maria-luisa','triana'],[],
- ['alfama','lisbon-cathedral','santa-luzia'],['jeronimos','discoveries','belem','chiado'],['pena','regaleira'],
- ['cascais','baixa','chiado','gulbenkian'],['ribeira'],
- ['sao-bento','porto-cathedral','clerigos','lello','luis','morro'],['gaia','bolhao','douro'],['foz'],[]
-];
+const dayPlaces = [["gothic", "barcelona-cathedral"], ["sagrada", "guell", "gracia"], ["batllo", "mila", "passeig", "barceloneta"], ["sol", "plaza-mayor", "letras"], ["prado", "retiro", "letras"], ["toledo-cathedral", "toledo-jewish", "toledo-view"], ["santa-cruz"], ["alcazar", "seville-cathedral", "giralda"], ["plaza-espana", "maria-luisa", "triana"], [], ["alfama", "lisbon-cathedral", "santa-luzia"], ["jeronimos", "discoveries", "belem", "chiado"], ["pena", "regaleira"], ["cascais", "baixa", "chiado", "gulbenkian"], ["baixa", "chiado"], ["ribeira"], ["sao-bento", "porto-cathedral", "clerigos", "lello", "luis", "morro"], ["gaia", "bolhao"], ["bolhao", "ribeira", "douro"], ["foz"], []];
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 function photoGallery(index){
  const ids=dayPlaces[index]||[];
@@ -204,10 +195,15 @@ function render(city='all'){
 document.querySelectorAll('[data-city]').forEach(b=>b.addEventListener('click',()=>render(b.dataset.city)));
 document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>render(a.dataset.jump)));
 render();
-const budgets={simple:[[750,1100],[420,630],[300,480],[240,360]],comfort:[[1300,2000],[630,840],[350,580],[300,450]],treat:[[2400,3500],[840,1260],[450,750],[380,600]]};
+const budgets={simple:[[750,1100],[420,630],[260,440],[210,330]],comfort:[[1300,2000],[630,840],[310,540],[270,420]],treat:[[2400,3500],[840,1260],[410,710],[350,570]]};
 function money(n){return n.toLocaleString('en-US');}
 function budget(){
  const input=document.querySelector('#travelers');
+ const airfareInput=document.querySelector('#airfare');
+ const airfare=Number(airfareInput.value);
+ const airfareValid=airfareInput.value.trim()!==''&&Number.isFinite(airfare)&&airfare>=0&&airfare<=1000000;
+ airfareInput.setCustomValidity(airfareValid?'':'請輸入 0 至 1,000,000 的每人機票預算');
+ document.querySelector('#airfare-error').textContent=airfareValid?'':'請輸入有效的每人機票預算（可填 0）。';
  const n=Number(input.value);
  const rateInput=document.querySelector('#exchange-rate');
  const rate=Number(rateInput.value);
@@ -218,23 +214,26 @@ function budget(){
  const valid=Number.isInteger(n)&&n>=1&&n<=20;
  input.setCustomValidity(valid?'':'請輸入 1 至 20 位旅客');
  document.querySelector('#people-error').textContent=valid?'':'請輸入 1 至 20 的整數人數。';
- if(!valid){['total-twd'].forEach(id=>document.getElementById(id).textContent='');document.querySelector('#total').textContent='—';document.querySelector('#budget-items').innerHTML='';document.querySelector('#room-note').textContent='';return;}
+ if(!valid){['total-twd','trip-total-twd','trip-reserve-twd'].forEach(id=>document.getElementById(id).textContent='');document.querySelector('#total').textContent='—';document.querySelector('#budget-items').innerHTML='';document.querySelector('#room-note').textContent='';return;}
  const amounts=budgets[document.querySelector('#budget-style').value];
  const rooms=Math.ceil(n/2);
  const group=amounts.map((v,i)=>v.map(x=>i===0?x*2*rooms:x*n));
  const lower=group.reduce((sum,v)=>sum+v[0],0),upper=group.reduce((sum,v)=>sum+v[1],0);
  const range=(lo,hi)=>`€${money(Math.round(lo))}–${money(Math.round(hi))}`;
  document.querySelector('#total').textContent=range(lower/n,upper/n);
- document.querySelector('#total-twd').textContent='每人約當台幣 '+twd(lower/n,upper/n);
+ document.querySelector('#total-twd').textContent='每人當地費用 '+twd(lower/n,upper/n);
+ const tripLow=lower/n*rate+airfare,tripHigh=upper/n*rate+airfare;
+ document.querySelector('#trip-total-twd').textContent=rateValid&&airfareValid?`約 NT$${money(Math.round(tripLow))}–${money(Math.round(tripHigh))}`:'請確認匯率與機票預算';
+ document.querySelector('#trip-reserve-twd').textContent=rateValid&&airfareValid?`另留 15% 預備金後：約 NT$${money(Math.round(tripLow*1.15))}–${money(Math.round(tripHigh*1.15))}`:'';
  document.querySelector('#room-note').textContent=`${n} 人 · ${rooms} 間雙人房 × 20 晚${n%2?'（含 1 間單人入住，按整房估算）':''}`;
  document.querySelector('#budget-items').innerHTML=group.map((v,i)=>`<div><span>${['住宿 · 每人分攤 20 晚','餐飲 · 每人 21 天','交通 · 每人','門票與體驗 · 每人'][i]}</span><span class="cost-values"><b>${range(v[0]/n,v[1]/n)}</b><small>${twd(v[0]/n,v[1]/n)}</small></span></div>`).join('');
 }
-document.querySelector('#budget-style').addEventListener('change',budget);document.querySelector('#travelers').addEventListener('input',budget);document.querySelector('#exchange-rate').addEventListener('input',budget);budget();
-const tasks=['確認巴塞隆納進、波多出的多點進出機票','確認護照效期與適用的入境要求（依國籍查官方資訊）','預訂 20 晚旅宿，優先可取消方案','預約聖家堂、奎爾公園、阿爾罕布拉宮與辛特拉門票','確認跨城火車與塞維亞－里斯本巴士班次','準備旅遊保險、網路、轉接頭與好走的鞋'];
-let checked=[];try{const saved=JSON.parse(localStorage.getItem('iberia-checklist-v2')||'[]');if(Array.isArray(saved))checked=saved.filter(v=>Number.isInteger(v)&&v>=0&&v<tasks.length);}catch{}
+document.querySelector('#budget-style').addEventListener('change',budget);document.querySelector('#travelers').addEventListener('input',budget);document.querySelector('#exchange-rate').addEventListener('input',budget);document.querySelector('#airfare').addEventListener('input',budget);budget();
+const tasks=['確認巴塞隆納進、波多出的多點進出機票','確認護照效期與申根免簽條件，出發前查 ETIAS／EES 最新規定','預訂 20 晚旅宿，優先可取消方案','預約聖家堂、奎爾公園、塞維亞王宮、普拉多與辛特拉門票','確認跨城火車與塞維亞－里斯本巴士班次','準備旅遊保險、網路、轉接頭與好走的鞋'];
+let checked=[];try{const saved=JSON.parse(localStorage.getItem('iberia-checklist-v3')||'[]');if(Array.isArray(saved))checked=saved.filter(v=>Number.isInteger(v)&&v>=0&&v<tasks.length);}catch{}
 document.querySelector('#checklist').innerHTML=tasks.map((t,i)=>`<label class="check"><input type="checkbox" value="${i}" ${checked.includes(i)?'checked':''}><span>${t}</span></label>`).join('');
 function progress(){document.querySelector('#check-progress').textContent=`已準備 ${document.querySelectorAll('#checklist input:checked').length} / ${tasks.length} 項`;}
-document.querySelector('#checklist').addEventListener('change',()=>{try{localStorage.setItem('iberia-checklist-v2',JSON.stringify([...document.querySelectorAll('#checklist input:checked')].map(i=>Number(i.value))));}catch{}progress();});progress();
+document.querySelector('#checklist').addEventListener('change',()=>{try{localStorage.setItem('iberia-checklist-v3',JSON.stringify([...document.querySelectorAll('#checklist input:checked')].map(i=>Number(i.value))));}catch{}progress();});progress();
 
 let beforePrintCity='all';
 window.addEventListener('beforeprint',()=>{beforePrintCity=document.querySelector('[data-city].active')?.dataset.city||'all';render('all');document.querySelectorAll('details').forEach(d=>d.open=true);});
