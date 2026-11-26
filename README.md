@@ -24,7 +24,7 @@
 
 - [Renfe](https://www.renfe.com/es/en)：西班牙城際鐵路。
 - [CP](https://www.cp.pt/)：里斯本–波多鐵路，實際起訖站依訂票確認。
-- [ALSA](https://www.alsa.com/)：塞維亞–里斯本巴士，跨境日預留 7–9 小時；2027 班次待開賣核對。
+- [ALSA](https://www.alsa.com/en/coach/seville-lisbon)：塞維亞–里斯本沒有直達火車；巴士約 6–7 小時，部分班次更久，另計兩端接駁。可選日間／夜間巴士或比較航班。本行程採日間移動，6/2 抵達後只入住、用餐與休息，不排景點。若改夜車需同步調整前晚住宿與清晨休息；葡萄牙慢 1 小時，須換算實際耗時。2027 班次待開賣核對。
 - [阿爾罕布拉官方參觀提醒](https://tickets.alhambra-patronato.es/en/helpful-tips/)：提早預約、具名票券、證件與納斯里德宮時段。
 - [塞維亞王宮](https://www.alcazarsevilla.org/)、[辛特拉宮殿](https://www.parquesdesintra.pt/en/)：門票與開放情形以官方公布為準。
 
