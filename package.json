@@ -1,0 +1,1 @@
+{"name":"travel-iberia","version":"1.0.0","private":true,"description":"A little rabbit's 21-day Spain and Portugal travel journal","scripts":{"dev":"python3 -m http.server 5173","check":"node --check app.js","build":"node scripts/build.mjs"}}
