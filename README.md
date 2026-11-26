@@ -37,3 +37,5 @@
 景點照片儲存在 `assets/places/`，避免依賴外部圖片即時載入。每張照片保留原作者、授權與 Wikimedia Commons 來源，可在照片下方或放大視窗查看；完整清單見 [圖片授權](PHOTO_CREDITS.md)。`places.js` 為前端資料，`assets/places.json` 為可讀原始資料。
 
 新增巴塞隆納：聖家堂、奎爾公園與高第建築。官方預約：[聖家堂](https://sagradafamilia.org/en/tickets)、[奎爾公園](https://parkguell.barcelona/en/buy-tickets/)。
+
+台幣試算：每人總額、費用明細、同行總額與含 15% 預備金總額皆顯示約當 NT$。預設以 1 EUR = 36.20 TWD 作規劃參考，可在頁面調整匯率；不即時抓取匯率，未含換匯／刷卡手續費。[匯率參考](https://api.exchangerate.guru/eur/twd/)。
